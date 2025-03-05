@@ -1,0 +1,17 @@
+# Archivos de Unity a ignorar
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]serSettings/
+.DS_Store
+*.pidb
+*.suo
+*.user
+*.unityproj
+*.exe
+*.apk
+*.idb
+*.pdb
