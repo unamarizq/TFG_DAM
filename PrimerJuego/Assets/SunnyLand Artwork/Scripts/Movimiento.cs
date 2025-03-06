@@ -8,11 +8,12 @@ public class Movimiento : MonoBehaviour
     public float speed;
     public float dirX;
     public SpriteRenderer spr;
+    Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -20,10 +21,10 @@ public class Movimiento : MonoBehaviour
     {
         dirX = Input.GetAxis("Horizontal");
 
-       // transform.position += new Vector3(dirX * speed, 0, 0);
-        transform.Translate(Vector3.right * dirX * speed * Time.deltaTime);
+        float moveX = Input.GetAxis("Horizontal") * speed * Time.deltaTime; // Usar deltaTime
+        rb.velocity = new Vector2(moveX / Time.deltaTime, rb.velocity.y);
 
-    if(dirX>0){
+        if (dirX>0){
         spr.flipX= false;
     }if(dirX<0){
         spr.flipX=true;

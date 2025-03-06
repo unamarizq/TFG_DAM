@@ -7709,7 +7709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caccce5d002bcc64283b6850355d6594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rbd: {fileID: 689260451}
+  rb: {fileID: 689260451}
   fuerza: 8
   anim: {fileID: 689260456}
   OnLandEvent:

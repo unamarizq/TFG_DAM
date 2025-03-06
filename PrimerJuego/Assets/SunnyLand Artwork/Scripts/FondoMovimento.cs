@@ -22,7 +22,7 @@ public class FondoMovimiento : MonoBehaviour
     
     void Update()
     {
-        offset = (jugadorRB.velocity.x * 0.1f) * velocidadMovimiento * Time.deltaTime;
+        offset = jugadorRB.velocity.x * 0.1f * velocidadMovimiento * Time.deltaTime;
         material.mainTextureOffset += offset;
 
           Debug.Log("Offset: " + offset);

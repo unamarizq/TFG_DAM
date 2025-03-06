@@ -8,7 +8,7 @@ using UnityEngine.Events; // Importante para usar UnityEvent
 public class Salto : MonoBehaviour
 {
 
-    public Rigidbody2D rbd;
+    public Rigidbody2D rb;
     public float fuerza;
 
     public Animator anim;
@@ -30,26 +30,14 @@ public class Salto : MonoBehaviour
 {
     if ((Input.GetKeyDown(KeyCode.Space) || (Gamepad.current != null && Gamepad.current.aButton.wasPressedThisFrame)) && Suelo == true)
     {
-        rbd.AddForce(Vector2.up * fuerza, ForceMode2D.Impulse);
+        float moveY = fuerza * Time.deltaTime; // Usar deltaTime
+        rb.velocity = new Vector2(rb.velocity.x, moveY / Time.deltaTime);
         Suelo = false;
         anim.SetBool("Jump", true);
-        //anim.SetBool("Fall", false); // Asegurarse de que no está cayendo aún
     }
 
-    // Detectar cuando empieza a caer
-    if (!Suelo) 
-    {
-        if (rbd.velocity.y > 0) // Sigue subiendo
-        {
-            anim.SetBool("Jump", true);
-            //anim.SetBool("Fall", false);
-        }
-        else if (rbd.velocity.y < 0) // Empieza a caer
-        {
-            anim.SetBool("Jump", false);
-            //anim.SetBool("Fall", true);
-        }
-    }
+        anim.SetBool("OnGround", Suelo);
+        anim.SetFloat("YVelocity", rb.velocity.y);
 }
 
 

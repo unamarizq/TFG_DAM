@@ -168,12 +168,3 @@ private IEnumerator DestruirDespuesDeTiempo(float tiempo)
 
 
 }
-
-
-
-
-
-        
-
-    
-
