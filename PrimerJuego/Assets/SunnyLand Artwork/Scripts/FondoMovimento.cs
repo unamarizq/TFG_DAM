@@ -25,7 +25,7 @@ public class FondoMovimiento : MonoBehaviour
         offset = jugadorRB.velocity.x * 0.1f * velocidadMovimiento * Time.deltaTime;
         material.mainTextureOffset += offset;
 
-          Debug.Log("Offset: " + offset);
-          Debug.Log("Velocidad del jugador: " + jugadorRB.velocity);
+          //Debug.Log("Offset: " + offset);
+          //Debug.Log("Velocidad del jugador: " + jugadorRB.velocity);
     }
 }
