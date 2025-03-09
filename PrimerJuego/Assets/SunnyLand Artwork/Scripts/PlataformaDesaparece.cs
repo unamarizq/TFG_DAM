@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem; // Asegúrate de incluir esta línea
+using UnityEngine.InputSystem; 
 
 public class PlataformaDesaparece : MonoBehaviour
 {
@@ -116,7 +116,7 @@ public class PlataformaDesaparece : MonoBehaviour
             // Vibración del mando
             if (Gamepad.current != null) 
             {
-                Gamepad.current.SetMotorSpeeds(0.5f, 0.5f); // Ajusta la vibración a tu gusto
+                Gamepad.current.SetMotorSpeeds(0.5f, 0.5f); 
             }
 
             tiempoVibracionRestante -= Time.deltaTime;

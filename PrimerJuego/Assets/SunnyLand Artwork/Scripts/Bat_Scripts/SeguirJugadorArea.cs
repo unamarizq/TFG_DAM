@@ -140,7 +140,7 @@ public class SeguirJugadorArea : MonoBehaviour
             }
 
             // Obtener duración del clip de animación
-            float duracionAnimacion = 0.5f; // Valor por defecto
+            float duracionAnimacion = 0.5f; 
             if (anim != null && anim.GetCurrentAnimatorClipInfo(0).Length > 0)
             {
                 duracionAnimacion = anim.GetCurrentAnimatorClipInfo(0)[0].clip.length;

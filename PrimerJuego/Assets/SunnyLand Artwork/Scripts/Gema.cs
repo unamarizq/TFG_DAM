@@ -20,13 +20,11 @@ public class Gema : MonoBehaviour
         {
             recolectada = true;
 
-            // Aumenta la puntuación
             Punto_M.puntuajes += 1;
 
             // Activa la animación de brillo
             anim.SetTrigger("Coger");
 
-            // Reproduce el sonido
             audioSource.Play();
 
             // Desactiva el collider para que no se repita la colisión

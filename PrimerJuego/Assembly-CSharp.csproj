@@ -72,6 +72,7 @@
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Punto_M.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\MenuOpciones_Scripts\MenuOpciones.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\MenuPrincipal_Scripts\MenuPrincipal.cs" />
+    <Compile Include="Assets\SunnyLand Artwork\Scripts\PlataformaCurva.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Gema.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Movimiento.cs" />
   </ItemGroup>

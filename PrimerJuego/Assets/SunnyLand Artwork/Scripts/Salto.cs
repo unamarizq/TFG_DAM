@@ -59,14 +59,14 @@ public class Salto : MonoBehaviour
         Suelo = false;
     }
 
-    // Raycasts laterales más cortos y ligeramente hacia abajo
-float distanciaPared = 0.1f; // Reducido para evitar detecciones innecesarias
+    // Raycasts laterales 
+float distanciaPared = 0.1f; 
 Vector2 origenIzquierda = new Vector2(transform.position.x - 0.4f, transform.position.y);
 Vector2 origenDerecha = new Vector2(transform.position.x + 0.4f, transform.position.y);
 
 // Modificamos la posición para que estén más hacia abajo
-Vector2 origenIzquierdaAbajo = new Vector2(transform.position.x - 0.4f, transform.position.y - 0.4f); // Más abajo
-Vector2 origenDerechaAbajo = new Vector2(transform.position.x + 0.4f, transform.position.y - 0.4f); // Más abajo
+Vector2 origenIzquierdaAbajo = new Vector2(transform.position.x - 0.4f, transform.position.y - 0.4f); 
+Vector2 origenDerechaAbajo = new Vector2(transform.position.x + 0.4f, transform.position.y - 0.4f); 
 
 RaycastHit2D hitIzquierda = Physics2D.Raycast(origenIzquierda, Vector2.left, distanciaPared);
 RaycastHit2D hitDerecha = Physics2D.Raycast(origenDerecha, Vector2.right, distanciaPared);
