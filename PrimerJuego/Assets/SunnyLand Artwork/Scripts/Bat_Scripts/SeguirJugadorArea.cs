@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -116,7 +117,7 @@ public class SeguirJugadorArea : MonoBehaviour
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
 {
     if (estaMuerto || anim == null) return; // Evita errores si anim no está asignado
 
@@ -151,12 +152,75 @@ public class SeguirJugadorArea : MonoBehaviour
             StartCoroutine(DestruirDespuesDeTiempo(duracionAnimacion));
         }
     }
+}*/
+
+private void OnTriggerEnter2D(Collider2D collision)
+{
+    if (estaMuerto || anim == null) return;
+
+    if (collision.CompareTag("Personaje"))
+    {
+        // Verificar qué parte del personaje ha colisionado
+        if (collision.gameObject.name == "Personaje") 
+        {
+            Debug.Log("Colisión con la cabeza");
+            ReiniciarEscena(); // Mata al personaje
+            
+        }
+        else 
+        {
+            float posicionJugadorY = collision.transform.position.y;
+            float posicionEnemigoY = transform.position.y;
+
+            if (posicionJugadorY > posicionEnemigoY + 0.3f) 
+            {
+                estaMuerto = true;
+                anim.SetTrigger("Muerto");
+
+                Rigidbody2D rbJugador = collision.GetComponent<Rigidbody2D>();
+                if (rbJugador != null)
+                {
+                    rbJugador.velocity = new Vector2(rbJugador.velocity.x, 7f);
+                }
+
+                float duracionAnimacion = anim.GetCurrentAnimatorClipInfo(0).Length > 0 
+                    ? anim.GetCurrentAnimatorClipInfo(0)[0].clip.length + 0.35f 
+                    : 0.85f;
+
+                StartCoroutine(DestruirDespuesDeTiempo(duracionAnimacion));
+            }
+            else
+            {
+                ReiniciarEscena();
+            }
+            
+        }
+    }
 }
+
 
 private IEnumerator DestruirDespuesDeTiempo(float tiempo)
 {
     yield return new WaitForSeconds(tiempo);
     Destroy(gameObject);
+}
+
+private void ReiniciarEscena()
+{
+    // Resta un zafiro
+    Zafiro.contadorZafiros--;
+
+    if (Zafiro.contadorZafiros <= 0)
+    {
+        // Si no quedan zafiros, ir a la pantalla de inicio
+        SceneManager.LoadScene("MenuPrincipal");
+        Zafiro.contadorZafiros = 3;
+    }
+    else
+    {
+        // Si aún quedan zafiros, reiniciar la escena
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
 
 // private void OnDrawGizmos(){

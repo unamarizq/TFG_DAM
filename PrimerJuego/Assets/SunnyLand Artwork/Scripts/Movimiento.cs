@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movimiento : MonoBehaviour
 {
@@ -31,4 +32,31 @@ public class Movimiento : MonoBehaviour
     }
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+{
+    if (collision.CompareTag("Pinchos"))
+    {
+        Debug.Log("El personaje tocó los pinchos. Reiniciando...");
+        ReiniciarEscena();
+    }
+}
+
+private void ReiniciarEscena()
+{
+    // Resta un zafiro
+    Zafiro.contadorZafiros--;
+
+    if (Zafiro.contadorZafiros <= 0)
+    {
+        // Si no quedan zafiros, ir a la pantalla de inicio
+        SceneManager.LoadScene("MenuPrincipal");
+        Zafiro.contadorZafiros = 3;
+    }
+    else
+    {
+        // Si aún quedan zafiros, reiniciar la escena
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+}
 }

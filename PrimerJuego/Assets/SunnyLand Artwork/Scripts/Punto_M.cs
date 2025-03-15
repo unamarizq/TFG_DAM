@@ -7,6 +7,7 @@ public class Punto_M : MonoBehaviour
 {
 
     public Text puntuaje;
+    public Text textoZafiros;
 
     public static int puntuajes;   
     // Start is called before the first frame update
@@ -22,5 +23,6 @@ public class Punto_M : MonoBehaviour
     void Update()
     {
         puntuaje.text = puntuajes.ToString();
+        textoZafiros.text = Zafiro.contadorZafiros.ToString();
     }
 }

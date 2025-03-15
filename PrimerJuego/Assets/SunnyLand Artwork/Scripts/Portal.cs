@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class Portal : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class Portal : MonoBehaviour
 
     void Update()
     {
-        if (jugadorDentro && Input.GetKeyDown(KeyCode.E))
+        if (jugadorDentro && (Input.GetKeyDown(KeyCode.E) || 
+        (Gamepad.current != null && Gamepad.current.buttonWest.wasPressedThisFrame)))
         {
             SceneManager.LoadScene(nivelDestino);
         }

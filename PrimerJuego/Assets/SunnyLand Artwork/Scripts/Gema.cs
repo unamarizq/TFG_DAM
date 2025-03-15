@@ -20,7 +20,17 @@ public class Gema : MonoBehaviour
         {
             recolectada = true;
 
-            Punto_M.puntuajes += 1;
+            if(Punto_M.puntuajes >=99){
+                Punto_M.puntuajes = 0;
+                Zafiro.contadorZafiros+=1;
+            }
+            else{
+                Punto_M.puntuajes += 1;
+            }
+
+
+
+            
 
             // Activa la animación de brillo
             anim.SetTrigger("Coger");
