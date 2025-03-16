@@ -4,12 +4,12 @@ using UnityEngine.InputSystem;
 
 public class PlataformaDesaparece : MonoBehaviour
 {
-    public float tiempoAntesDeDesaparecer = 2f; // Tiempo antes de comenzar a desvanecerse
-    public float tiempoReaparicion = 3f; // Tiempo antes de reaparecer
-    public float tiempoDesvanecimiento = 1f; // Tiempo que tarda en desaparecer
-    public float distanciaCaida = 1f; // Cuánto se mueve hacia abajo al desvanecerse
-    public float tiempoVibracion = 2f; // Tiempo de la vibración
-    public float intensidadVibracion = 0.1f; // Cuánto se mueve la plataforma durante la vibración
+    public float tiempoAntesDeDesaparecer = 2f;
+    public float tiempoReaparicion = 3f;
+    public float tiempoDesvanecimiento = 1f;
+    public float distanciaCaida = 1f;
+    public float tiempoVibracion = 2f;
+    public float intensidadVibracion = 0.1f;
 
     private Collider2D colisionador;
     private SpriteRenderer spriteRenderer;
@@ -34,7 +34,6 @@ public class PlataformaDesaparece : MonoBehaviour
 
     IEnumerator DesaparecerYReaparecer()
     {
-        // Comienza la vibración de inmediato cuando el personaje la toca
         StartCoroutine(VibrarPlataforma());
 
         // Espera un poco antes de comenzar a desaparecer
@@ -101,7 +100,6 @@ public class PlataformaDesaparece : MonoBehaviour
         personajeEncima = false;
     }
 
-    // Coroutine para la vibración
     IEnumerator VibrarPlataforma()
     {
         Vector3 posicionOriginal = transform.position;
@@ -113,7 +111,6 @@ public class PlataformaDesaparece : MonoBehaviour
             // Movimiento aleatorio hacia los lados
             transform.position = posicionOriginal + new Vector3(Random.Range(-intensidadVibracion, intensidadVibracion), 0f, 0f);
 
-            // Vibración del mando
             if (Gamepad.current != null) 
             {
                 Gamepad.current.SetMotorSpeeds(0.5f, 0.5f); 
@@ -126,7 +123,6 @@ public class PlataformaDesaparece : MonoBehaviour
         // Restaurar la posición original después de la vibración
         transform.position = posicionOriginal;
 
-        // Detener la vibración del mando
         if (Gamepad.current != null)
         {
             Gamepad.current.SetMotorSpeeds(0f, 0f);

@@ -9,6 +9,8 @@ TagManager:
   - Suelo
   - gema
   - Pinchos
+  - Detector
+  - Piedras
   layers:
   - Default
   - TransparentFX

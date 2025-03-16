@@ -1,21 +1,21 @@
 using UnityEngine;
-using UnityEngine.InputSystem; // Necesario para la vibración
-using System.Collections; // Necesario para usar corrutinas
+using UnityEngine.InputSystem; 
+using System.Collections;
 
 public class PlataformaCurva : MonoBehaviour
 {
     public Transform puntoA;
     public Transform puntoB;
     public float velocidad = 2f;
-    public float alturaArco = 2f; // Altura máxima de la curva
+    public float alturaArco = 2f;
 
     private float tiempo = 0f;
-    private Gamepad gamepad; // Controlador detectado
-    private Coroutine vibracionCoroutine; // Referencia a la corrutina
+    private Gamepad gamepad;
+    private Coroutine vibracionCoroutine;
 
     void Start()
     {
-        gamepad = Gamepad.current; // Obtiene el gamepad actual
+        gamepad = Gamepad.current;
     }
 
     void Update()
@@ -23,7 +23,6 @@ public class PlataformaCurva : MonoBehaviour
         tiempo += Time.deltaTime * velocidad;
         float t = Mathf.PingPong(tiempo, 1f); // Movimiento de ida y vuelta
 
-        // Interpolación lineal entre A y B
         Vector3 posicionLineal = Vector3.Lerp(puntoA.position, puntoB.position, t);
 
         // Agregar movimiento en forma de arco
@@ -61,19 +60,19 @@ public class PlataformaCurva : MonoBehaviour
 
     IEnumerator VibracionIntermitente()
     {
-        while (true) // Se repite mientras el personaje está sobre la plataforma
+        while (true) 
         {
             if (gamepad != null)
             {
-                gamepad.SetMotorSpeeds(0.3f, 0.5f); // Activa la vibración
+                gamepad.SetMotorSpeeds(0.3f, 0.5f);
             }
-            yield return new WaitForSeconds(0.2f); // Espera
+            yield return new WaitForSeconds(0.2f);
 
             if (gamepad != null)
             {
-                gamepad.SetMotorSpeeds(0f, 0f); // Desactiva la vibración
+                gamepad.SetMotorSpeeds(0f, 0f);
             }
-            yield return new WaitForSeconds(0.3f); // Espera
+            yield return new WaitForSeconds(0.3f);
         }
     }
 
@@ -81,7 +80,7 @@ public class PlataformaCurva : MonoBehaviour
     {
         if (gamepad != null)
         {
-            gamepad.SetMotorSpeeds(0, 0); // Detiene la vibración
+            gamepad.SetMotorSpeeds(0, 0);
         }
     }
 }

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Gema : MonoBehaviour
@@ -11,7 +10,7 @@ public class Gema : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-         audioSource = GetComponent<AudioSource>(); // Obtiene el AudioSource
+         audioSource = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter2D(Collider2D laCosa)
@@ -27,11 +26,7 @@ public class Gema : MonoBehaviour
             else{
                 Punto_M.puntuajes += 1;
             }
-
-
-
             
-
             // Activa la animación de brillo
             anim.SetTrigger("Coger");
 
@@ -39,10 +34,7 @@ public class Gema : MonoBehaviour
 
             // Desactiva el collider para que no se repita la colisión
             GetComponent<Collider2D>().enabled = false;
-
-            // Espera a que termine la animación antes de destruir la gema
             StartCoroutine(DestruirDespuesDeAnimacion());
-            // Espera a que termine el sonido y luego destruye la gema
             StartCoroutine(DestruirDespuesDeSonido());
         }
     }

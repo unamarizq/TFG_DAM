@@ -32,7 +32,7 @@ public class SeguirJugadorArea : MonoBehaviour
 
     private void Update()
     {
-        if (estaMuerto) return; // Si ya está en animación de muerte, no ejecutar nada más
+        if (estaMuerto) return;
 
         switch (estadoActual)
         {
@@ -160,11 +160,10 @@ private void OnTriggerEnter2D(Collider2D collision)
 
     if (collision.CompareTag("Personaje"))
     {
-        // Verificar qué parte del personaje ha colisionado
         if (collision.gameObject.name == "Personaje") 
         {
             Debug.Log("Colisión con la cabeza");
-            ReiniciarEscena(); // Mata al personaje
+            ReiniciarEscena(); 
             
         }
         else 
@@ -206,19 +205,16 @@ private IEnumerator DestruirDespuesDeTiempo(float tiempo)
 }
 
 private void ReiniciarEscena()
-{
-    // Resta un zafiro
+{  
     Zafiro.contadorZafiros--;
 
     if (Zafiro.contadorZafiros <= 0)
     {
-        // Si no quedan zafiros, ir a la pantalla de inicio
         SceneManager.LoadScene("MenuPrincipal");
         Zafiro.contadorZafiros = 3;
     }
     else
     {
-        // Si aún quedan zafiros, reiniciar la escena
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

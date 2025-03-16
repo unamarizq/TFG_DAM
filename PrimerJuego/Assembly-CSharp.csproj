@@ -64,11 +64,14 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.16f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\SunnyLand Artwork\Scripts\DetectorPinchos.cs" />
+    <Compile Include="Assets\SunnyLand Artwork\Scripts\Piedra.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Animacion.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\FondoMovimento.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Zafiro.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Salto.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\PlataformaDesaparece.cs" />
+    <Compile Include="Assets\SunnyLand Artwork\Scripts\DetectorPiedras.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Bat_Scripts\SeguirJugadorArea.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Punto_M.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Palanca.cs" />
