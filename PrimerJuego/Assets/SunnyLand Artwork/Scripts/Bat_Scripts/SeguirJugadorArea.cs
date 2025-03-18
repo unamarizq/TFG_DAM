@@ -17,6 +17,8 @@ public class SeguirJugadorArea : MonoBehaviour
     public Animator anim;
     public bool mirandoDerecha;
     private bool estaMuerto = false; // Evita múltiples activaciones
+    private AudioSource audioSource;
+    
 
     public enum EstadosMovimiento
     {
@@ -28,6 +30,7 @@ public class SeguirJugadorArea : MonoBehaviour
     private void Start()
     {
         puntoInicial = transform.position;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -175,6 +178,9 @@ private void OnTriggerEnter2D(Collider2D collision)
             {
                 estaMuerto = true;
                 anim.SetTrigger("Muerto");
+
+                audioSource.Play();
+                
 
                 Rigidbody2D rbJugador = collision.GetComponent<Rigidbody2D>();
                 if (rbJugador != null)
