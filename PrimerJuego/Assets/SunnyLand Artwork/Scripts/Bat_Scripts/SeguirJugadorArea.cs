@@ -17,7 +17,7 @@ public class SeguirJugadorArea : MonoBehaviour
     public Animator anim;
     public bool mirandoDerecha;
     private bool estaMuerto = false; // Evita múltiples activaciones
-    //private AudioSource audioSource;
+    private AudioSource audioSource;
 
     public GameObject prefabZafiro;  // Prefab del zafiro
 public float probabilidadSoltarZafiro = 0.3f; // 30% de probabilidad
@@ -33,7 +33,7 @@ public float probabilidadSoltarZafiro = 0.3f; // 30% de probabilidad
     private void Start()
     {
         puntoInicial = transform.position;
-        //audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -168,7 +168,6 @@ private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Personaje") 
         {
-            Debug.Log("Colisión con la cabeza");
             ReiniciarEscena(); 
             
         }
@@ -182,7 +181,7 @@ private void OnTriggerEnter2D(Collider2D collision)
                 estaMuerto = true;
                 anim.SetTrigger("Muerto");
 
-                //audioSource.Play();
+                audioSource.Play();
                 
 
                 Rigidbody2D rbJugador = collision.GetComponent<Rigidbody2D>();

@@ -119,9 +119,7 @@ if ((hitIzquierda.collider != null && hitIzquierda.collider.CompareTag("Suelo"))
         {
             aumentoSaltoActivo = true; // Activamos el aumento de salto
             fuerza *= 1.25f; // Doblamos la fuerza de salto
-             Debug.Log("Fuerza aumentada: " + fuerza);
             StartCoroutine(AumentoSalto());
-            //Cristales.contadorCristales = 5;
         }
     }
 

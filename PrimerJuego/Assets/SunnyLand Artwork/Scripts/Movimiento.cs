@@ -36,7 +36,6 @@ public class Movimiento : MonoBehaviour
 {
     if (collision.CompareTag("Pinchos"))
     {
-        Debug.Log("El personaje tocó los pinchos. Reiniciando...");
         ReiniciarEscena();
     }
 }
@@ -62,7 +61,7 @@ public void ComprobarVelocidad()
     {
         speed += 2.5f;
         velocidadAumentada = true;
-        Debug.Log("Velocidad aumentada: " + speed);
+        
     }
 }
 

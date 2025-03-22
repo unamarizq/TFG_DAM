@@ -19,6 +19,5 @@ public class Animacion : MonoBehaviour
     void Update()
     {
         anim.SetFloat("XVelocity", Mathf.Abs(rb.velocity.x));
-        Debug.Log(rb.velocity.x);
     }
 }
