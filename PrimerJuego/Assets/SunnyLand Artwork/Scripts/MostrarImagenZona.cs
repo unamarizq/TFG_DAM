@@ -1,24 +1,33 @@
 using UnityEngine;
-using UnityEngine.UI;
+using System.Collections;
 
 public class MostrarImagenZona : MonoBehaviour
 {
-    public GameObject imagen; // Arrastra la imagen en el Inspector
+    public GameObject imagen; 
+    private SpriteRenderer spriteRenderer;
+    private Coroutine fadeCoroutine;
 
     private void Start()
     {
-        imagen.SetActive(false); // Oculta la imagen al inicio
-        Debug.Log("Script iniciado, imagen oculta.");
+        spriteRenderer = imagen.GetComponent<SpriteRenderer>();
+
+        if (spriteRenderer == null)
+        {
+            Debug.LogError("No se encontró SpriteRenderer en el objeto de imagen.");
+            return;
+        }
+
+        Color color = spriteRenderer.color;
+        color.a = 0; // Hacer la imagen invisible al inicio
+        spriteRenderer.color = color;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Objeto detectado: " + other.gameObject.name);
-        
         if (other.CompareTag("Personaje"))
         {
-            Debug.Log("Personaje detectado, mostrando imagen.");
-            imagen.SetActive(true);
+            if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
+            fadeCoroutine = StartCoroutine(FadeIn());
         }
     }
 
@@ -26,8 +35,30 @@ public class MostrarImagenZona : MonoBehaviour
     {
         if (other.CompareTag("Personaje"))
         {
-            Debug.Log("Personaje salió de la zona, ocultando imagen.");
-            imagen.SetActive(false);
+            if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
+            fadeCoroutine = StartCoroutine(FadeOut());
+        }
+    }
+
+    IEnumerator FadeIn()
+    {
+        while (spriteRenderer.color.a < 1)
+        {
+            Color color = spriteRenderer.color;
+            color.a += Time.deltaTime * 2; // Ajusta la velocidad
+            spriteRenderer.color = color;
+            yield return null;
+        }
+    }
+
+    IEnumerator FadeOut()
+    {
+        while (spriteRenderer.color.a > 0)
+        {
+            Color color = spriteRenderer.color;
+            color.a -= Time.deltaTime * 2;
+            spriteRenderer.color = color;
+            yield return null;
         }
     }
 }
