@@ -59,7 +59,7 @@
     <UnityVersion>2022.3.16f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\Unai\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\Unai\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.1\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.16f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.16f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
@@ -67,6 +67,8 @@
     <Compile Include="Assets\SunnyLand Artwork\Scripts\DetectorPinchos.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Piedra.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Animacion.cs" />
+    <Compile Include="Assets\SunnyLand Artwork\Scripts\ActivarNarrativa.cs" />
+    <Compile Include="Assets\SunnyLand Artwork\Scripts\Cofre.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\FondoMovimento.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Zafiro.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Salto.cs" />

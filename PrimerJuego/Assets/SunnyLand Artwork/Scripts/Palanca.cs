@@ -47,12 +47,12 @@ public class Palanca : MonoBehaviour
             spriteRenderer.sprite = imagenActivada;
             HacerVibrarMando();
         }
-        else if ((dentroDelRango && Input.GetKeyDown(KeyCode.X) && activado) ||
-                 (dentroDelRango && Gamepad.current?.buttonEast.wasPressedThisFrame == true && activado))
-        {
-            activado = false;
-            spriteRenderer.sprite = imagenNormal;
-        }
+        // else if ((dentroDelRango && Input.GetKeyDown(KeyCode.X) && activado) ||
+        //          (dentroDelRango && Gamepad.current?.buttonEast.wasPressedThisFrame == true && activado))
+        // {
+        //     activado = false;
+        //     spriteRenderer.sprite = imagenNormal;
+        // }
     }
 
     private IEnumerator BajarPinchos()
