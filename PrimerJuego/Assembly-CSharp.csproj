@@ -74,16 +74,19 @@
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Salto.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\PlataformaDesaparece.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\DetectorPiedras.cs" />
+    <Compile Include="Assets\SunnyLand Artwork\Scripts\DisparoBolaDeFuego.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Bat_Scripts\SeguirJugadorArea.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Punto_M.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Palanca.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\MenuOpciones_Scripts\MenuOpciones.cs" />
+    <Compile Include="Assets\SunnyLand Artwork\Scripts\BolaDeFuegoAnimacion.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Cristal.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Portal.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\MenuPrincipal_Scripts\MenuPrincipal.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\PlataformaCurva.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Gema.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\MostrarImagenZona.cs" />
+    <Compile Include="Assets\SunnyLand Artwork\Scripts\CinematicaIntro.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Movimiento.cs" />
   </ItemGroup>
   <ItemGroup>
