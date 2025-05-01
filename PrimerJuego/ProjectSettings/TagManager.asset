@@ -11,6 +11,7 @@ TagManager:
   - Pinchos
   - Detector
   - Piedras
+  - Proyectil
   layers:
   - Default
   - TransparentFX

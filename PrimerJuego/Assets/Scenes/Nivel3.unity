@@ -713,6 +713,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 30542194}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 1903748175}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &30542199
@@ -1552,7 +1554,7 @@ Transform:
   m_GameObject: {fileID: 254085669}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.51, y: -0.17, z: -13.43}
+  m_LocalPosition: {x: 155.4, y: 0.21, z: -13.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2131,6 +2133,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 281709738}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 1903748175}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &281709742
@@ -4637,6 +4641,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 615921117}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 1903748175}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &615921117
@@ -4876,7 +4882,7 @@ Transform:
   m_GameObject: {fileID: 629052348}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.51, y: -0.17, z: -13.43}
+  m_LocalPosition: {x: 155.4, y: 0.21, z: -13.43}
   m_LocalScale: {x: 0.54038, y: 0.54038, z: 0.54038}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5528,7 +5534,7 @@ Transform:
   m_GameObject: {fileID: 689260450}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.51, y: -0.17, z: -3.43}
+  m_LocalPosition: {x: 155.4, y: 0.21, z: -3.43}
   m_LocalScale: {x: 3.9698, y: 3.9698, z: 3.9698}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6074,6 +6080,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 710289010}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 1903748175}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &710289015
@@ -7372,6 +7380,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 824858167}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 1903748175}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &824858172
@@ -8213,6 +8223,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 941031304}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 1903748175}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &941031309
@@ -9112,6 +9124,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 1041538037}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 1903748175}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &1041538037
@@ -9824,6 +9838,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 1068714244}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 1903748175}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &1068714249
@@ -35955,6 +35971,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 1554849758}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 1903748175}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &1554849758
@@ -36812,6 +36830,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 1615635116}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 1903748175}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &1615635121
@@ -39618,6 +39638,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 1967215504}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 1903748175}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &1967215509
@@ -40189,6 +40211,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 2057763207}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 1903748175}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &2057763211

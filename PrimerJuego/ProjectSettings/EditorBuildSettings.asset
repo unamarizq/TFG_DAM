@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cinematica.unity
     guid: c7e3acd12d8472642a73337a96985a9f
+  - enabled: 1
+    path: Assets/Scenes/GameOverVideo.unity
+    guid: 155f383edcb106145b4891c3e3f977d3
+  - enabled: 1
+    path: Assets/Scenes/Fin.unity
+    guid: 0072492bc92635f47a246f348e846e14
   m_configObjects: {}

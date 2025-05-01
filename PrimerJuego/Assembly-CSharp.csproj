@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\SunnyLand Artwork\Scripts\DetectorPinchos.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Piedra.cs" />
+    <Compile Include="Assets\SunnyLand Artwork\Scripts\Bat_Scripts\JefeFinal.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Animacion.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\ActivarNarrativa.cs" />
     <Compile Include="Assets\SunnyLand Artwork\Scripts\Cofre.cs" />

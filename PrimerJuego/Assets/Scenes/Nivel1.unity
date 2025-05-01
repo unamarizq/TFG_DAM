@@ -439,6 +439,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 15728633}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &15728633
@@ -994,6 +996,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 49875777}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &49875781
@@ -3993,6 +3997,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 217789101}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &217789101
@@ -4377,6 +4383,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 226369319}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &226369319
@@ -4502,7 +4510,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 579316ff770f2e343a2e29fd5cd57446, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4761,6 +4769,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 233260784}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &233260784
@@ -5485,6 +5495,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 289329354}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &289329354
@@ -6525,6 +6537,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 319656502}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &319656502
@@ -7497,6 +7511,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 333874335}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &333874335
@@ -8133,6 +8149,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 345516814}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &345516814
@@ -11500,6 +11518,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 586563908}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &586563908
@@ -12049,6 +12069,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 613554420}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &613554424
@@ -13070,6 +13092,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 676388687}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &676388691
@@ -15890,6 +15914,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 786270582}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &786270582
@@ -16898,6 +16924,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 899597179}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &899597183
@@ -19260,6 +19288,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 977641022}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &977641027
@@ -19834,6 +19864,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 1018392371}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &1018392371
@@ -20168,6 +20200,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 1054705962}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &1054705962
@@ -21059,6 +21093,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 1098797226}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &1098797226
@@ -22075,6 +22111,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 1128766163}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!61 &1128766165
@@ -106078,6 +106116,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 1490530603}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &1490530603
@@ -106366,6 +106406,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 1491399550}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &1491399550
@@ -106846,6 +106888,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 1492315812}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &1492315812
@@ -110657,6 +110701,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 1712561596}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &1712561601
@@ -114810,6 +114856,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 1940187343}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!95 &1940187343
@@ -117138,6 +117186,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 2060930222}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &2060930226
@@ -118698,6 +118748,8 @@ MonoBehaviour:
   estadoActual: 0
   anim: {fileID: 2127795565}
   mirandoDerecha: 0
+  estaMuerto: 0
+  audioSource: {fileID: 0}
   prefabZafiro: {fileID: 133873964}
   probabilidadSoltarZafiro: 0.65
 --- !u!70 &2127795570

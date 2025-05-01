@@ -16,8 +16,8 @@ public class SeguirJugadorArea : MonoBehaviour
     public EstadosMovimiento estadoActual;
     public Animator anim;
     public bool mirandoDerecha;
-    private bool estaMuerto = false; // Evita múltiples activaciones
-    private AudioSource audioSource;
+    public bool estaMuerto = false; // Evita múltiples activaciones
+    public AudioSource audioSource;
 
     public GameObject prefabZafiro;  // Prefab del zafiro
 public float probabilidadSoltarZafiro = 0.3f; // 30% de probabilidad
@@ -30,7 +30,7 @@ public float probabilidadSoltarZafiro = 0.3f; // 30% de probabilidad
         Volviendo,
     }
 
-    private void Start()
+    public void Start()
     {
         puntoInicial = transform.position;
         audioSource = GetComponent<AudioSource>();
@@ -206,7 +206,7 @@ private void OnTriggerEnter2D(Collider2D collision)
 }
 
 
-private IEnumerator DestruirDespuesDeTiempo(float tiempo)
+public IEnumerator DestruirDespuesDeTiempo(float tiempo)
 {
     yield return new WaitForSeconds(tiempo);
 
@@ -218,13 +218,13 @@ private IEnumerator DestruirDespuesDeTiempo(float tiempo)
     Destroy(gameObject);
 }
 
-private void ReiniciarEscena()
+public void ReiniciarEscena()
 {  
     Zafiro.contadorZafiros--;
 
     if (Zafiro.contadorZafiros <= 0)
     {
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("GameOverVideo");
         Zafiro.contadorZafiros = 3;
     }
     else

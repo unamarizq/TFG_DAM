@@ -46,7 +46,7 @@ private void ReiniciarEscena()
 
     if (Zafiro.contadorZafiros <= 0)
     {
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("GameOverVideo");
         Zafiro.contadorZafiros = 3;
     }
     else
