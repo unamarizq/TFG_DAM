@@ -36,22 +36,7 @@ public class Movimiento : MonoBehaviour
 {
     if (collision.CompareTag("Pinchos"))
     {
-        ReiniciarEscena();
-    }
-}
-
-private void ReiniciarEscena()
-{
-    Zafiro.contadorZafiros--;
-
-    if (Zafiro.contadorZafiros <= 0)
-    {
-        SceneManager.LoadScene("GameOverVideo");
-        Zafiro.contadorZafiros = 3;
-    }
-    else
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+       SeguirJugadorArea.ReiniciarEscena();
     }
 }
 

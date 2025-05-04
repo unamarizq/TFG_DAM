@@ -111,6 +111,14 @@ if ((hitIzquierda.collider != null && hitIzquierda.collider.CompareTag("Suelo"))
                 OnLandEvent.Invoke();
         }
     }
+    void OnCollisionStay2D(Collision2D laCosa)
+{
+    if (laCosa.gameObject.CompareTag("Suelo"))
+    {
+        Suelo = true;
+    }
+}
+
 
     // Método para comprobar si se debe aumentar el salto
     public void ComprobarSalto()

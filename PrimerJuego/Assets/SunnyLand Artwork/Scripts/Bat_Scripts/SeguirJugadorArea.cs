@@ -218,14 +218,17 @@ public IEnumerator DestruirDespuesDeTiempo(float tiempo)
     Destroy(gameObject);
 }
 
-public void ReiniciarEscena()
+public static void ReiniciarEscena()
 {  
+    //FindObjectOfType<TransicionMuerte>().IniciarTransicion();
     Zafiro.contadorZafiros--;
+    Cristales.contadorCristales=0;
 
     if (Zafiro.contadorZafiros <= 0)
     {
         SceneManager.LoadScene("GameOverVideo");
         Zafiro.contadorZafiros = 3;
+        Punto_M.puntuajes = 0;
     }
     else
     {

@@ -14,22 +14,8 @@ public class Piedra : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Personaje") && !enElSuelo)
         {
-            ReiniciarEscena();
+            SeguirJugadorArea.ReiniciarEscena();
         }
     }
 
-    private void ReiniciarEscena()
-    {
-        Zafiro.contadorZafiros--;
-
-        if (Zafiro.contadorZafiros <= 0)
-        {
-            SceneManager.LoadScene("GameOverVideo");
-            Zafiro.contadorZafiros = 3;
-        }
-        else
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-    }
 }
